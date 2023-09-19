@@ -1,0 +1,273 @@
+export const doctors = [
+  {
+    id: "01",
+    name: "Naveen",
+    specialty: "Surgeon",
+    avgRating: 4.8,
+    totalRating: 272,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695135300/Notinline/pic21_owoa1s.avif",
+    totalPatients: 1500,
+    location: "Hyderabad",
+    hospital: "Apollo Hospitals",
+  },
+  {
+    id: "02",
+    name: "Rajesh",
+    specialty: "Cardiologist",
+    avgRating: 4.5,
+    totalRating: 210,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134738/Notinline/pic14_oai4fg.avif",
+    totalPatients: 1200,
+    location: "Mumbai",
+    hospital: "Mumbai Heart Center",
+  },
+  {
+    id: "03",
+    name: "Priya",
+    specialty: "Pediatrician",
+    avgRating: 4.9,
+    totalRating: 320,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133484/Notinline/pic9_vf7qie.avif",
+    totalPatients: 1800,
+    location: "Bangalore",
+    hospital: "Children's Hospital Bangalore",
+  },
+  {
+    id: "04",
+    name: "Amit",
+    specialty: "Orthopedic Surgeon",
+    avgRating: 4.2,
+    totalRating: 160,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134739/Notinline/pic12_yzbt90.avif",
+    totalPatients: 900,
+    location: "Delhi",
+    hospital: "Delhi Ortho Clinic",
+  },
+  {
+    id: "05",
+    name: "Kavita",
+    specialty: "Dermatologist",
+    avgRating: 4.7,
+    totalRating: 180,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133483/Notinline/pic8_jd6xd7.avif",
+    totalPatients: 1100,
+    location: "Chennai",
+    hospital: "Chennai Skin Care Center",
+  },
+  {
+    id: "06",
+    name: "Vikram",
+    specialty: "Gynecologist",
+    avgRating: 4.6,
+    totalRating: 220,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134740/Notinline/pic13_f5f2ra.avif",
+    totalPatients: 1300,
+    location: "Pune",
+    hospital: "Pune Women's Clinic",
+  },
+  {
+    id: "07",
+    name: "Sneha",
+    specialty: "Ophthalmologist",
+    avgRating: 4.9,
+    totalRating: 300,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133483/Notinline/pic7_niqmmg.avif",
+    totalPatients: 1600,
+    location: "Jaipur",
+    hospital: "Jaipur Eye Care Hospital",
+  },
+  {
+    id: "08",
+    name: "Sreeja",
+    specialty: "Neurologist",
+    avgRating: 4.4,
+    totalRating: 190,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133482/Notinline/pic6_dnvl39.avif",
+    totalPatients: 950,
+    location: "Kolkata",
+    hospital: "Kolkata Neuro Clinic",
+  },
+  {
+    id: "09",
+    name: "Anita",
+    specialty: "Dentist",
+    avgRating: 4.8,
+    totalRating: 280,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133483/Notinline/pic5_trtdln.avif",
+    totalPatients: 1700,
+    location: "Hyderabad",
+    hospital: "Hyderabad Dental Care",
+  },
+  {
+    id: "10",
+    name: "Sanjay",
+    specialty: "ENT Specialist",
+    avgRating: 4.3,
+    totalRating: 150,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134741/Notinline/pic16_laxfh3.avif",
+    totalPatients: 800,
+    location: "Mumbai",
+    hospital: "Mumbai ENT Center",
+  },
+  {
+    id: "11",
+    name: "Manisha",
+    specialty: "Psychiatrist",
+    avgRating: 4.7,
+    totalRating: 220,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133482/Notinline/pic4_zwhaqu.avif",
+    totalPatients: 1200,
+    location: "Bangalore",
+    hospital: "Bangalore Mind Clinic",
+  },
+  {
+    id: "12",
+    name: "Sravan",
+    specialty: "Urologist",
+    avgRating: 4.6,
+    totalRating: 230,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134744/Notinline/pic17_vnj5d2.avif",
+    totalPatients: 1100,
+    location: "Delhi",
+    hospital: "Delhi Urology Center",
+  },
+  {
+    id: "13",
+    name: "Arpita",
+    specialty: "Dermatologist",
+    avgRating: 4.9,
+    totalRating: 290,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133481/Notinline/pic3_h8fumd.avif",
+    totalPatients: 1500,
+    location: "Chennai",
+    hospital: "Chennai Skin Solutions",
+  },
+  {
+    id: "14",
+    name: "Vivek",
+    specialty: "Pediatrician",
+    avgRating: 4.7,
+    totalRating: 180,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134746/Notinline/pic18_vogdb1.avif",
+    totalPatients: 900,
+    location: "Pune",
+    hospital: "Pune Children's Clinic",
+  },
+  {
+    id: "15",
+    name: "Smita",
+    specialty: "Gynecologist",
+    avgRating: 4.5,
+    totalRating: 200,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133481/Notinline/pic2_y7d4jv.avif",
+    totalPatients: 1100,
+    location: "Jaipur",
+    hospital: "Jaipur Women's Health Center",
+  },
+  {
+    id: "16",
+    name: "Prateek",
+    specialty: "Orthopedic Surgeon",
+    avgRating: 4.8,
+    totalRating: 240,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134748/Notinline/pic19_xywpof.avif",
+    totalPatients: 1400,
+    location: "Kolkata",
+    hospital: "Kolkata Ortho Solutions",
+  },
+  {
+    id: "17",
+    name: "Preeti",
+    specialty: "Ophthalmologist",
+    avgRating: 4.6,
+    totalRating: 210,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133548/Notinline/pic1_p6ilre.avif",
+    totalPatients: 1200,
+    location: "Hyderabad",
+    hospital: "Hyderabad Eye Care",
+  },
+  {
+    id: "18",
+    name: "Alok",
+    specialty: "Neurologist",
+    avgRating: 4.3,
+    totalRating: 160,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134748/Notinline/pic20_mvdocb.avif",
+    totalPatients: 800,
+    location: "Mumbai",
+    hospital: "Mumbai Neuro Clinic",
+  },
+  {
+    id: "19",
+    name: "Soumya",
+    specialty: "Dentist",
+    avgRating: 4.9,
+    totalRating: 280,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133484/Notinline/pic10_lxxf3k.avif",
+    totalPatients: 1500,
+    location: "Bangalore",
+    hospital: "Bangalore Dental Care",
+  },
+  {
+    id: "20",
+    name: "Sudhir",
+    specialty: "ENT Specialist",
+    avgRating: 4.5,
+    totalRating: 190,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134801/Notinline/pic11_tlg2rl.avif",
+    totalPatients: 950,
+    location: "Chennai",
+    hospital: "Chennai ENT Center",
+  },
+];
+
+export const reviews = [
+  {
+    reviewId: "001",
+    patientName: "Ramya",
+    rating: 4.5,
+    review:
+      "I had a great experience with Dr. Naveen. He is a highly skilled surgeon, and the staff at Apollo Hospitals were very accommodating. I would highly recommend him to others.",
+  },
+  {
+    reviewId: "002",
+    patientName: "Vamshi",
+    rating: 4.8,
+    review:
+      "Dr. Rajesh is an excellent cardiologist. He took the time to explain my condition and treatment options thoroughly. His expertise and care made me feel confident in my recovery.",
+  },
+  {
+    reviewId: "003",
+    patientName: "Meghana",
+    rating: 4.2,
+    review:
+      "Dr. Priya is an amazing pediatrician. She is very patient with children and has a gentle approach. My kids love her, and I trust her completely with their healthcare.",
+  },
+  {
+    reviewId: "004",
+    patientName: "Raghu",
+    rating: 4.7,
+    review:
+      "I recently had knee surgery performed by Dr. Amit, and the results have been fantastic. He is a skilled orthopedic surgeon, and I am grateful for his expertise.",
+  },
+];
