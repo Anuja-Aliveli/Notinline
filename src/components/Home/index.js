@@ -3,7 +3,7 @@ import Header from "../Header";
 import "./index.css";
 
 class Home extends Component {
-  heroSection = () => (
+  renderHeroSection = () => (
     <div className="hero-section">
       <div className="text-container">
         <p className="hero-head">
@@ -48,11 +48,86 @@ class Home extends Component {
     </div>
   );
 
+  renderTreatment = () => (
+    <div className="treatment-section">
+      <div className="head-button">
+        <p className="treatment-head">Consult Doctors based on Symptoms</p>
+        <button type="button">View All</button>
+      </div>
+      <div className="symptoms-container">
+        <div className="type-container">
+          <img
+            className="type"
+            alt="kidney"
+            src="https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695191264/Notinline/top-speciality-kidney_mvthf9.svg"
+          />
+          <p>Kidney</p>
+        </div>
+        <div className="type-container">
+          <img
+            className="type"
+            alt="stomach"
+            src="https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695191519/Notinline/stomach_s0zspn.svg"
+          />
+          <p>Digestion</p>
+        </div>
+        <div className="type-container">
+          <img
+            className="type"
+            alt="child"
+            src="https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695191518/Notinline/childern_iwibty.svg"
+          />
+          <p>Child</p>
+        </div>
+        <div className="type-container">
+          <img
+            className="type"
+            alt="mind"
+            src="https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695191518/Notinline/mind_qtxo7c.svg"
+          />
+          <p>Mental Health</p>
+        </div>
+        <div className="type-container">
+          <img
+            className="type"
+            alt="General"
+            src="https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695191518/Notinline/general_ctn6rn.svg"
+          />
+          <p>Fever</p>
+        </div>
+        <div className="type-container">
+          <img
+            className="type"
+            alt="skin"
+            src="https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695191519/Notinline/skin_ckfd8u.svg"
+          />
+          <p>Acne</p>
+        </div>
+      </div>
+    </div>
+  );
+
+  renderChooseUs = () => (
+    <div className="treatment-section">
+      <p className="treatment-head text-center">Why Choose Us?</p>
+      <div className="choose-section">
+        <p className="fact-container">100,000 Verified doctors</p>
+        <p className="fact-container">3M+ Patients</p>
+        <p className="fact-container">25M Patients/year</p>
+        <p className="fact-container">Safety First</p>
+        <p className="fact-container">Cutting Edge Technology</p>
+      </div>
+    </div>
+  );
+
   render() {
     return (
       <div className="home-page">
         <Header />
-        {this.heroSection()}
+        {this.renderHeroSection()}
+        {this.renderTreatment()}
+        {this.renderChooseUs()}
+        {this.renderServices()}
       </div>
     );
   }
