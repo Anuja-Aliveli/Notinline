@@ -1,4 +1,10 @@
-export const doctors = [
+import { Component } from "react";
+import Header from "../Header";
+import Footer from "../Footer";
+import { AiFillStar, AiOutlineSearch } from "react-icons/ai";
+import "./index.css";
+
+const doctors = [
   {
     id: "01",
     name: "Naveen",
@@ -241,33 +247,108 @@ export const doctors = [
   },
 ];
 
-export const reviews = [
-  {
-    reviewId: "001",
-    patientName: "Ramya",
-    rating: 4.5,
-    review:
-      "I had a great experience with Dr. Naveen. He is a highly skilled surgeon, and the staff at Apollo Hospitals were very accommodating. I would highly recommend him to others.",
-  },
-  {
-    reviewId: "002",
-    patientName: "Vamshi",
-    rating: 4.8,
-    review:
-      "Dr. Rajesh is an excellent cardiologist. He took the time to explain my condition and treatment options thoroughly. His expertise and care made me feel confident in my recovery.",
-  },
-  {
-    reviewId: "003",
-    patientName: "Meghana",
-    rating: 4.2,
-    review:
-      "Dr. Priya is an amazing pediatrician. She is very patient with children and has a gentle approach. My kids love her, and I trust her completely with their healthcare.",
-  },
-  {
-    reviewId: "004",
-    patientName: "Raghu",
-    rating: 4.7,
-    review:
-      "I recently had knee surgery performed by Dr. Amit, and the results have been fantastic. He is a skilled orthopedic surgeon, and I am grateful for his expertise.",
-  },
-];
+class Doctors extends Component {
+  state = {
+    searchInput: "",
+    doctorsArray: doctors,
+    empty: false,
+  };
+
+  onInput = (event) => {
+    const searchInput = event.target.value;
+    this.setState({ searchInput }, () => {
+      if (searchInput === "") {
+        this.setState({ doctorsArray: doctors, empty: false });
+      }
+    });
+  };
+
+  onEnter = (event) => {
+    if (event.key === "Enter") {
+      this.onSearchInput();
+    }
+  };
+
+  onSearchInput = () => {
+    const { searchInput } = this.state;
+    const filteredArray = doctors.filter(
+      (each) => each.name === searchInput || each.location === searchInput
+    );
+    if (filteredArray.length === 0) {
+      this.setState({ empty: true });
+    } else {
+      this.setState({ doctorsArray: filteredArray, empty: false });
+    }
+  };
+
+  renderSearch = () => {
+    let { doctorsArray, searchInput, empty } = this.state;
+    doctorsArray = searchInput === "" ? doctors : doctorsArray;
+    return (
+      <>
+        <div className="search-container">
+          <input
+            type="search"
+            placeholder="Enter Doctor or Location"
+            className="input"
+            onChange={this.onInput}
+            onKeyDown={this.onEnter}
+          />
+          <AiOutlineSearch
+            size={25}
+            onClick={this.onSearchInput}
+            type="button"
+          />
+        </div>
+        {empty && (
+          <p className="text-center bold" style={{ alignSelf: "center" }}>
+            No Doctors Found. Try Searching Others.
+          </p>
+        )}
+        {!empty && (
+          <div className="profiles-container">
+            {doctorsArray.map((each) => (
+              <div className="profile-card" key={each.id}>
+                <img
+                  className="profile-image"
+                  alt="image-profile"
+                  src={each.photo}
+                />
+                <div className="detail-container">
+                  <div className="row">
+                    <p className="bold">{each.name}</p>
+                    <p>{each.specialty}</p>
+                  </div>
+                  <div className="row">
+                    <p className="bold">{each.location}</p>
+                    <p>{each.totalPatients}+ Patients</p>
+                  </div>
+                  <div className="row">
+                    <p className="bold">Ratings</p>
+                    <div className="rating">
+                      <AiFillStar size={30} color="orange" />
+                      <p>{each.avgRating}</p>
+                      <p>({each.totalRating})</p>
+                    </div>
+                  </div>
+                  <p className="text-center bold">{each.hospital}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </>
+    );
+  };
+
+  render() {
+    return (
+      <div className="doctors-page">
+        <Header />
+        {this.renderSearch()}
+        <Footer />
+      </div>
+    );
+  }
+}
+export default Doctors;

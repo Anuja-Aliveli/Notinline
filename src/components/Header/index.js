@@ -1,14 +1,11 @@
 import { withRouter, Link } from "react-router-dom";
 import {
   FaStethoscope,
-  FaCogs,
-  FaPhone,
   FaHome,
 } from "react-icons/fa";
-import {BsFillQuestionSquareFill} from 'react-icons/bs'
 import "./index.css";
 
-const links = ["/", "/services", "/choose", "/contact", "/doctors"];
+const links = ["/", "/doctors"];
 
 const Header = (props) => {
   const { match } = props;
@@ -33,24 +30,6 @@ const Header = (props) => {
             to={links[1]}
             className={path === links[1] ? "menu-item active" : "menu-item"}
           >
-            Services
-          </Link>
-          <Link
-            to={links[2]}
-            className={path === links[2] ? "menu-item active" : "menu-item"}
-          >
-            Why Choose Us?
-          </Link>
-          <Link
-            to={links[3]}
-            className={path === links[3] ? "menu-item active" : "menu-item"}
-          >
-            Contact
-          </Link>
-          <Link
-            to={links[4]}
-            className={path === links[4] ? "menu-item active" : "menu-item"}
-          >
             Find Doctors
           </Link>
         </div>
@@ -72,24 +51,6 @@ const Header = (props) => {
           <Link
             to={links[1]}
             className={path === links[1] ? "icon active" : "icon"}
-          >
-            <FaCogs />
-          </Link>
-          <Link
-            to={links[2]}
-            className={path === links[2] ? "icon active" : "icon"}
-          >
-            <BsFillQuestionSquareFill />
-          </Link>
-          <Link
-            to={links[3]}
-            className={path === links[3] ? "icon active" : "icon"}
-          >
-            <FaPhone />
-          </Link>
-          <Link
-            to={links[4]}
-            className={path === links[4] ? "icon active" : "icon"}
           >
             <FaStethoscope  />
           </Link>

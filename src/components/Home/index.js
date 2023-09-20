@@ -1,6 +1,48 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
+import {AiFillStar} from 'react-icons/ai'
 import Header from "../Header";
+import Footer from "../Footer";
 import "./index.css";
+
+const top = [
+  {
+    id: "05",
+    name: "Kavita",
+    specialty: "Dermatologist",
+    avgRating: 4.7,
+    totalRating: 180,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133483/Notinline/pic8_jd6xd7.avif",
+    totalPatients: 1100,
+    location: "Chennai",
+    hospital: "Chennai Skin Care Center",
+  },
+  {
+    id: "06",
+    name: "Vikram",
+    specialty: "Gynecologist",
+    avgRating: 4.6,
+    totalRating: 220,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695134740/Notinline/pic13_f5f2ra.avif",
+    totalPatients: 1300,
+    location: "Pune",
+    hospital: "Pune Women's Clinic",
+  },
+  {
+    id: "07",
+    name: "Sneha",
+    specialty: "Ophthalmologist",
+    avgRating: 4.9,
+    totalRating: 300,
+    photo:
+      "https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1695133483/Notinline/pic7_niqmmg.avif",
+    totalPatients: 1600,
+    location: "Jaipur",
+    hospital: "Jaipur Eye Care Hospital",
+  },
+];
 
 class Home extends Component {
   renderHeroSection = () => (
@@ -17,7 +59,9 @@ class Home extends Component {
           team of highly-rated doctors is committed to providing the highest
           quality of care for you and your loved ones.
         </p>
-        <button type="button">Find Doctor</button>
+        <Link to="/doctors">
+          <button type="button">Find Doctor</button>
+        </Link>
       </div>
       <div className="hero-images-container">
         <div className="video-container">
@@ -120,6 +164,70 @@ class Home extends Component {
     </div>
   );
 
+  renderServices = () => (
+    <div className="treatment-section">
+      <p className="treatment-head text-center">Our Medical Services</p>
+      <div className="choose-section">
+        <div className="card">
+          <p className="bold">Video Consultation</p>
+          <p className="card-para">-Connect within 60sec</p>
+        </div>
+        <div className="card">
+          <p className="bold">Find Doctors Near U</p>
+          <p className="card-para">-Confirmed Appointments</p>
+        </div>
+        <div className="card">
+          <p className="bold">Medicines</p>
+          <p className="card-para">-Essentials At your doorsteps</p>
+        </div>
+        <div className="card">
+          <p className="bold">Lab Tests</p>
+          <p className="card-para">-Sample Pickup at your Home</p>
+        </div>
+        <div className="card">
+          <p className="bold">Surgeries</p>
+          <p className="card-para">-Safe and Trusted Centers</p>
+        </div>
+      </div>
+    </div>
+  );
+
+  renderTopDoctors = () => (
+    <div className="treatment-section">
+      <p className="treatment-head text-center">Our Top Doctors</p>
+      <div className="profiles-container">
+            {top.map((each) => (
+              <div className="profile-card" key={each.id}>
+                <img
+                  className="profile-image"
+                  alt="image-profile"
+                  src={each.photo}
+                />
+                <div className="detail-container">
+                  <div className="row">
+                    <p className="bold">{each.name}</p>
+                    <p>{each.specialty}</p>
+                  </div>
+                  <div className="row">
+                    <p className="bold">{each.location}</p>
+                    <p>{each.totalPatients}+ Patients</p>
+                  </div>
+                  <div className="row">
+                    <p className="bold">Ratings</p>
+                    <div className="rating">
+                      <AiFillStar size={30} color="orange" />
+                      <p>{each.avgRating}</p>
+                      <p>({each.totalRating})</p>
+                    </div>
+                  </div>
+                  <p className="text-center bold">{each.hospital}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+    </div>
+  );
+
   render() {
     return (
       <div className="home-page">
@@ -127,7 +235,9 @@ class Home extends Component {
         {this.renderHeroSection()}
         {this.renderTreatment()}
         {this.renderChooseUs()}
+        {this.renderTopDoctors()}
         {this.renderServices()}
+        <Footer />
       </div>
     );
   }
